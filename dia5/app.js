@@ -7,7 +7,7 @@ var listaCompras = {
   otros: []
 };
 
-// Pregunta inicial para saber si el usuario quiere agregar productos
+//  Pregunta inicial para saber si el usuario quiere agregar productos
 var preguntaInical = prompt("¿Quieres agregar un producto a la lista de compras? si/no").trim().toLowerCase();
 
 // Validación para asegurarse de que el usuario responda solo "si" o "no"
@@ -16,7 +16,7 @@ if (preguntaInical !== "si" && preguntaInical !== "no") {
   preguntaInical = prompt("¿Quieres agregar un producto a la lista de compras? si/no").trim().toLowerCase();
 }
 
-// Bucle para seguir pidiendo productos mientras la respuesta sea "si"
+//! Bucle para seguir pidiendo productos mientras la respuesta sea "si"
 while (preguntaInical === "si") {
   
   // Pregunta por el producto y su categoría
@@ -44,11 +44,7 @@ while (preguntaInical === "si") {
   
   // Pregunta si el usuario quiere agregar otro producto
   preguntaInical = prompt("¿Quieres agregar otro producto a la lista de compras? si/no").trim().toLowerCase();
-
-  // Si la respuesta es "no", se rompe el bucle
-  if (preguntaInical === "no") {
-    break;
-  }
+  
 }
 
 // Mensaje final con la lista de compras organizada por categorías
@@ -64,3 +60,4 @@ for (let categoria in listaCompras) {
 
 // Muestra el mensaje con la lista final
 alert(mensaje);
+
